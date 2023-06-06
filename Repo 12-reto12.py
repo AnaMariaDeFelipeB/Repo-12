@@ -6,9 +6,9 @@ texto = file.read()
 
 # Punto 1
 
-def contarVocales(*args): 
+def contarVocales(*args): # Creamos la función.
 
-    a = (texto.count("a"))
+    a = (texto.count("a"))  # Guarda y cuenta cuantas veces se repite dicho caracter. 
     e = (texto.count("e"))
     i = (texto.count("i"))
     o = (texto.count("o"))
@@ -19,9 +19,9 @@ def contarVocales(*args):
     O = (texto.count("O"))
     U = (texto.count("U"))
 
-    totalVocales = a + e + i + o + u + A + E + I + O + U
+    totalVocales = a + e + i + o + u + A + E + I + O + U # Suma e imprime. 
 
-    return (f"El total de vocales en el texto es: {totalVocales}")
+    return (f"El total de vocales en el texto es: {totalVocales}") #Devuelve
 
 # Punto 2
 
@@ -79,7 +79,7 @@ def contarConsonantes(*args):
 
 def listarPalabras(*args): 
     listaConPalabras = texto.split()  # Va extraer cada palabra del texto que se encuentre antes de un espacio y la agrega a una lista.
-    listaNueva = [] # Generamos diccionario vacio.
+    listaNueva = [] # Generamos lista vacia.
     lista = [] # Generamos lista vacia.
 
     for numeroPalabra in range(len(listaConPalabras)): # Itera correspondiendo al tipo
@@ -89,17 +89,17 @@ def listarPalabras(*args):
 
     
 
-    diccionario = {}
-    for palabra in listaNueva: 
-        if palabra in diccionario: 
-            diccionario[palabra] +=1
+    diccionario = {} # Generamos diccionario vacio.
+    for palabra in listaNueva: # Recorre la lista
+        if palabra in diccionario: # Indica condición. Que la palabra se encuentre en el diccionario. 
+            diccionario[palabra] +=1 # En caso de que si, suma 1
         else: 
-            diccionario[palabra] = 1
+            diccionario[palabra] = 1 # Si no es así, agrega al diccionario la palabra. 
     
 
-    for i in range(len(diccionario)): 
-        x = list(diccionario.items())[i][::-1]
-        lista.append(x)
+    for i in range(len(diccionario)): # Itera la longitud del diccionario
+        x = list(diccionario.items())[i][::-1] # Invierte el orden en el diccionario
+        lista.append(x) # Agrega a la lista
 
     return lista
 
